@@ -34,6 +34,10 @@ class CardEditor extends React.Component{
           </thead> 
           <tbody>{cards}</tbody>
          </table>
+         <br/>
+         <input placeholder="Front of card" />
+         <input placeholder="Back of card" />
+         <button>Add card</button>
       </div>
      );
   };
