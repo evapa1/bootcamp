@@ -7,11 +7,11 @@ class CardEditor extends React.Component{
   //mpa function with any array, can map over that array of objects
   // takesevery element in cards array and map it to jsx element
   render() {
-    const cards = this.props.cards.map() => {
+    const cards = this.props.cards.map((card, index) => {
       //takes in current card and return elements want card to become
        //iterating over each card and mapping it to a fake row
       return {
-         <tr>
+         <tr key=index>
             <td>{card.front}</td>
             <td>{card.back}</td>
             <td>
