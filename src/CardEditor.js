@@ -51,12 +51,14 @@ class CardEditor extends React.Component{
          </table>
          <br/>
          <input 
+          name="front"
           onChange={this.handleFrontChange} 
           placeholder="Front of card" 
           value={this.state.front} 
          />
         
          <input 
+          name="back"
           onChange={this.handleBackChange}
           placeholder="Back of card" 
           value={this.state.back} 
