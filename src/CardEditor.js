@@ -10,7 +10,17 @@ class CardEditor extends React.Component{
     super(props);
     this.state = {front: '', back: ''};
    }
+   
+   handleFrontChange = event => {
+    console.log(event.target.value);
+    this.setState({ front: event.target.value });
+   }
   
+   handleBackChange = event => {
+    console.log(event.target.value);
+    this.setState({ back: event.target.value });
+   }
+   
   render() {
     const cards = this.props.cards.map((card, index) => {
       //takes in current card and return elements want card to become
@@ -40,8 +50,17 @@ class CardEditor extends React.Component{
           <tbody>{cards}</tbody>
          </table>
          <br/>
-         <input placeholder="Front of card" value={this.state.front} />
-         <input placeholder="Back of card" value={this.state.back} />
+         <input 
+          onChange={this.handleFrontChange} 
+          placeholder="Front of card" 
+          value={this.state.front} 
+         />
+        
+         <input 
+          onChange={this.handleBackChange}
+          placeholder="Back of card" 
+          value={this.state.back} 
+         />
          <button>Add card</button>
       </div>
      );
