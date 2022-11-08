@@ -21,6 +21,8 @@ class CardEditor extends React.Component{
     this.setState({ back: event.target.value });
    }
    
+   handChange = event => this.setState({ [event.target.name]: event.target.value});
+   
   render() {
     const cards = this.props.cards.map((card, index) => {
       //takes in current card and return elements want card to become
