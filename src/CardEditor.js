@@ -12,8 +12,8 @@ class CardEditor extends React.Component{
        //iterating over each card and mapping it to a fake row
       return {
          <tr>
-            <td>card front</td>
-            <td>card back</td>
+            <td>{card.front}</td>
+            <td>{card.back}</td>
             <td>
               <button>Delete card</button>
             </td>
