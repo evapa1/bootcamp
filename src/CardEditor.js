@@ -6,6 +6,11 @@ class CardEditor extends React.Component{
   // render in a table
   //mpa function with any array, can map over that array of objects
   // takesevery element in cards array and map it to jsx element
+  constuctor(props) {
+    super(props);
+    this.state = {front: '', back: ''};
+   }
+  
   render() {
     const cards = this.props.cards.map((card, index) => {
       //takes in current card and return elements want card to become
@@ -35,8 +40,8 @@ class CardEditor extends React.Component{
           <tbody>{cards}</tbody>
          </table>
          <br/>
-         <input placeholder="Front of card" />
-         <input placeholder="Back of card" />
+         <input placeholder="Front of card" value={this.state.front} />
+         <input placeholder="Back of card" value={this.state.back} />
          <button>Add card</button>
       </div>
      );
