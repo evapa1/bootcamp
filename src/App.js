@@ -1,7 +1,8 @@
 import React from 'react';
+import CardEditor from './CardEditor';
 
 function App() {
-  return <div className="App">Testing</div>;
+  return <CardEditor />
 }
 
 export default App;
